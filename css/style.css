@@ -128,7 +128,7 @@ header{
         width: 100%;
         }
 
-    header{
+    body>header{
         flex-direction: column;
     }
 
@@ -144,10 +144,11 @@ header{
         flex-basis: 250px;
         border: solid 2px #45ADDD;
         align-self: flex-end;
-        flex-direction: column;
+        flex-direction: row;
     }
     .pricing{
         align-self: flex-end;
+        flex-direction: row;
     }
 
     #gallery{
