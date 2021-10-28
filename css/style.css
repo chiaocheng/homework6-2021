@@ -87,13 +87,18 @@ header{
 
 
 
+
 /* desktop styles starts*/
 @media screen and (min-width:850px) { 
-    header{
-        flex-direction: column;
+    body>header{
+        flex-direction: row;
         justify-content: space-between;
         position: sticky;
         top: 0;
+    }
+    header{
+        flex-direction: row;
+        justify-content: space-between;
     }
     .nav_links{
         flex-direction: row;
@@ -115,18 +120,22 @@ header{
 
 /* print styles sarts*/
 /*@media print*/
-@media screen and (min-width:900px){
+@media print{
     body{
         background-image: none;
     }
     nav{
-        min-width: 1200px;
+        width: 100%;
+        }
+
+    header{
+        flex-direction: column;
     }
 
     .nav_links{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .gallery{
         display: none;
@@ -134,16 +143,26 @@ header{
     .card{
         flex-basis: 250px;
         border: solid 2px #45ADDD;
+        align-self: flex-end;
+        flex-direction: column;
     }
     .pricing{
-        align-items: flex-end;
-        justify-items: flex-end;
-        align-content: flex-end;
+        align-self: flex-end;
     }
 
     #gallery{
         display: none;
     }
+
+    .card li:nth-child(1)::before {
+        content: "👍";
+      }
+    .card li:nth-child(2)::after {
+        content: "👍";
+      }
+    .card li:nth-child(3)::before {
+        content: "👍";
+      }
 
 
 }
